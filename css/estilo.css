@@ -1,9 +1,5 @@
 /* Universales */
 
-#body {
-    background-image: linear-gradient(to right, #1d2b64, #f8cdda);
-    color: white;
-}
 .boton_enviar {
     transition: 2s; }
   
@@ -12,7 +8,7 @@
   
 /* Navbar */
 .navbar, footer{
-    background-color: #456079;
+    background-color: #6e95b981;
 }
 
 .active {
@@ -30,18 +26,14 @@ nav img {
 /* Index */
 
 .texto__principal {
-    height: 55vh;
+    margin-top: 2rem;
 }
 
 
 /* Sobre mí */
-body h2 {
+.pages__head {
     padding-top: 2rem;
     text-align: center;
-}
-
-.container {
-    margin: 2rem 0;
 }
 
 .texto {
@@ -55,8 +47,8 @@ body h2 {
 /* Acordeón */
 
 .card {
-    /* background-color: rgb(78, 119, 138); */
-    background-color: #456079;
+    /* background-color: rgba(143, 231, 212, 0.61); */
+    background-color: #6e95b9a9;
     margin-bottom: 2rem;
 }
 
@@ -81,11 +73,16 @@ body h2 {
 }
 
 /* Contacto */
-
+.formulario {
+    background-color: rgb(247, 242, 213);
+    border-radius: 1rem;
+    margin: 1rem 0;
+    padding: 1rem 1rem;
+}
 .formulario div button {
     color: #fff;
     padding: 1rem 5rem;
-    background-color: #456079;
+    background-color: #6e95b981;
     grid-column: 2 / 3;
     grid-row: 5 / 6; 
 }
@@ -154,7 +151,7 @@ body h2 {
 @media (min-width: 1024px){
     .formulario textarea {
         height: 300px;
-        width: 500px; 
+        width: 400px; 
     }
           
      input {
@@ -164,7 +161,19 @@ body h2 {
 }
 
 /* Novedades */
-
+.articulo {
+    background-color: rgb(247, 242, 213);
+    margin: 1rem 0;
+    padding: 1rem;
+}
+.articulo__titulo {
+    font-size: 20px;
+    padding-top: 1rem;
+    text-align: center;
+}
+.articulo__desc {
+    padding-right: 1.5rem;
+}
 .boton {
     display: block;
     text-decoration: none;
@@ -202,6 +211,11 @@ body h2 {
         grid-template-columns: 28% 72%;
         column-gap: 2rem; 
     }
+    .articulo__titulo {
+        font-size: 25px;
+        padding-top: 1rem;
+        text-align: left;
+    }
   
     .boton {
         display: block;
@@ -214,6 +228,7 @@ body h2 {
         font-weight: 700;
         margin-bottom: 2rem;
         transition: 2s; 
+        width: 450px;
     }
   
     .boton:hover {
@@ -228,11 +243,11 @@ body h2 {
 /* Footer */
 .footer {
     padding: 1rem;
-    color: #fff;
+    color: black;
     font-family: var(--fuenteTitulos);
     display: flex;
     flex-direction: column;
-    background-color: #456079;
+    background-color: #6e95b981;
     justify-content: center;
     align-items: center; 
 }
