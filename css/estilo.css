@@ -67,24 +67,24 @@ nav img {
 }
 
 @media (min-width: 375px) {
-  main {
+  .main__contacto {
     max-width: 86%;
   }
 }
 @media (min-width: 425px) {
-  main {
+  .main__contacto {
     max-width: 74%;
   }
 }
 
 @media (min-width: 768px) {
-  main {
-    width: 100%;
+  .main__contacto {
+    max-width: 100%;
   }
 }
 
 @media (min-width: 768px) {
-  main {
+  .main__contacto {
     width: 100%;}
   .formulario {
     height: 100vh;
