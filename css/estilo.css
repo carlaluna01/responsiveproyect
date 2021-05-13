@@ -70,16 +70,36 @@ nav img {
   .main__contacto {
     max-width: 86%;
   }
-}
-@media (min-width: 425px) {
-  .main__contacto {
-    max-width: 74%;
+  textarea {
+    max-width: 230px;
   }
 }
+
+@media (min-width: 405px) {
+  .main__contacto {
+    max-width: 80%;
+  }
+}
+
+@media (min-width: 425px) {
+  .main__contacto {
+    max-width: 75%;
+  }
+}
+
+@media (min-width: 433px) {
+  .main__contacto {
+    max-width: 70%;
+  }
+}
+
 
 @media (min-width: 768px) {
   .main__contacto {
     max-width: 100%;
+  }
+  textarea {
+    max-width: 400px;
   }
 }
 
@@ -87,7 +107,7 @@ nav img {
   .main__contacto {
     width: 100%;}
   .formulario {
-    height: 100vh;
+    height: 75vh;
     display: grid;
     grid-template-columns: 50% 50%;
     grid-template-rows: repeat(5, 60px);
