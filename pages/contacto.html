@@ -48,25 +48,25 @@
               <h2 class="pages__head">Información de contacto</h2>
               <p class="col-md-12 text-center">Completá el siguiente formulario con tu consulta y te responderemos a la brevedad</p>
 
-              <form class="col-12 formulario">
+              <form class="col-12 formulario" action="https://formspree.io/f/xbjqygrv" method="POST">
                 <div class="campo1 col-12">
                     <label for="nombre">Nombre y apellido</label>
-                    <input type="text" id="nombre">
+                    <input type="text" id="nombre" name="Nombre y apellido">
                 </div>
 
                 <div class="campo2 col-12 col-md-12">
                     <label for="telefono">Celular</label>
-                    <input type="text" id="telefono">
+                    <input type="text" id="telefono" name="Teléfono">
                 </div>
 
                 <div class="campo3 col-12">
                     <label for="mail">Correo electrónico</label>
-                    <input type="email" id="mail">
+                    <input type="email" id="mail" name="E-mail">
                 </div>
 
                 <div class="campo4 col-12">
                     <label for="cuil">CUIT/CUIL</label>
-                    <input type="text" id="cuil">
+                    <input type="text" id="cuil" name="Cuil/Cuit">
                 </div>
                 
                 <div class="campo5 col-12">
@@ -80,8 +80,9 @@
                 </div>
 
                 <div class="campo6 col-12">
-                    <p class="campo6_texto">Ingrese su consulta</p>
-                    <textarea name="" id="" cols="30" rows="10"></textarea>
+                    <p class="campo6_texto" name="Consulta">Ingrese su consulta</p>
+                    <!-- <textarea name="" id="" cols="30" rows="10"></textarea> -->
+                    <input type="text" name="Consulta" class="textarea">
                 </div>
 
                 <div>
@@ -125,5 +126,27 @@
     
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        var form = document.getElementById("my-form");
+        
+        async function handleSubmit(event) {
+          event.preventDefault();
+          var status = document.getElementById("my-form-status");
+          var data = new FormData(event.target);
+          fetch(event.target.action, {
+            method: form.method,
+            body: data,
+            headers: {
+                'Accept': 'application/json'
+            }
+          }).then(response => {
+            status.innerHTML = "Thanks for your submission!";
+            form.reset()
+          }).catch(error => {
+            status.innerHTML = "Oops! There was a problem submitting your form"
+          });
+        }
+        form.addEventListener("submit", handleSubmit)
+    </script>
 </body>
 </html>

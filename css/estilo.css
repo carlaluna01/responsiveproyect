@@ -70,8 +70,10 @@ nav img {
   .main__contacto {
     max-width: 86%;
   }
-  textarea {
-    max-width: 230px;
+  .textarea {
+    max-width: 250px;
+    height: 160px;
+    margin-bottom: 1rem;
   }
 }
 
@@ -98,7 +100,7 @@ nav img {
   .main__contacto {
     max-width: 100%;
   }
-  textarea {
+  .textarea {
     max-width: 400px;
   }
 }
@@ -131,7 +133,7 @@ nav img {
     grid-row: 1 / 5; }
   .campo6_texto {
     padding-bottom: 1rem; }
-  .formulario textarea {
+  .formulario .textarea {
     height: 400px;
     width: 250px; }
   input {
@@ -145,7 +147,7 @@ nav img {
     grid-row: 5 / 6; } }
 
 @media (min-width: 1024px) {
-  .formulario textarea {
+  .formulario .textarea {
     height: 300px;
     width: 400px; }
   input {
